@@ -92,6 +92,7 @@ class Model:
     def get_reachable_recursive(self, start):
         visitati = set()
         self.ricorsione(self.G, start, visitati)
+        visitati.discard(start)
         return list(visitati)
 
     def ricorsione(self, grafo, nodo, visitati):
